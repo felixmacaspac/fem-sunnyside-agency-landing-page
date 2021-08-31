@@ -1,0 +1,23 @@
+$breakpoints-up : (
+  'small': '30em',
+  'medium': '48em',
+  'large': '90em',
+);
+
+@mixin breakpoint($size) {
+  @media (min-width: map-get($breakpoints-up, $size )) {
+    @content;
+  }
+}
+
+/*
+
+- syntax 
+
+h1 {
+  @include breakpoint(small) {
+    background: red;
+  }
+}
+
+*/
