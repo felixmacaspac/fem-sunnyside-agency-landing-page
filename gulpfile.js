@@ -9,11 +9,11 @@ const terser = require('gulp-terser');
 const browsersync = require('browser-sync').create();
 
 // Use dart-sass for @use
-sass.compiler = require('dart-sass');
+// sass.compiler = require('dart-sass');
 
 // Sass Task
 function scssTask() {
-	return src('app/scss/style.scss', { sourcemaps: true })
+	return src('src/scss/style.scss', { sourcemaps: true })
 		.pipe(sass())
 		.pipe(postcss([autoprefixer(), cssnano()]))
 		.pipe(dest('dist', { sourcemaps: '.' }));
@@ -21,7 +21,7 @@ function scssTask() {
 
 // JavaScript Task
 function jsTask() {
-	return src('app/js/script.js', { sourcemaps: true })
+	return src('src/scripts/index.js', { sourcemaps: true })
 		.pipe(babel({ presets: ['@babel/preset-env'] }))
 		.pipe(terser())
 		.pipe(dest('dist', { sourcemaps: '.' }));
@@ -51,7 +51,7 @@ function browserSyncReload(cb) {
 function watchTask() {
 	watch('*.html', browserSyncReload);
 	watch(
-		['app/scss/**/*.scss', 'app/**/*.js'],
+		['src/scss/**/*.scss', 'src/**/*.js'],
 		series(scssTask, jsTask, browserSyncReload)
 	);
 }
