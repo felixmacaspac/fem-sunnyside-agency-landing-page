@@ -1,7 +1,7 @@
 $breakpoints-up : (
-  'small': '30em',
-  'medium': '48em',
-  'large': '90em',
+  'small': '30em', // 375px
+  'medium': '48em', // 768px
+  'large': '90em', // 1440px
 );
 
 @mixin breakpoint($size) {

@@ -1,6 +1,19 @@
+@use '../utilities/functions.scss';
+
 h1, h2, h3, h4 {
   margin-top: 0;
   font-family: var(--font-heading);
+  font-weight: 900;
+  color: var(--dark-desaturated-blue);
+}
+
+h1 {
+  font-size: clamp(32px, 5vw, 44px);
+  letter-spacing: 5px;
+}
+
+h2 {
+  font-size: clamp(30px, 5vw, 34px);
 }
 
 a, a:visited, a:active {

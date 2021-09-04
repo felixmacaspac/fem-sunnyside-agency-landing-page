@@ -1,1 +1,59 @@
 @use '../utilities/breakpoints.scss' as *;
+
+.header {
+
+  &__wrapper {
+    display: flex;
+    background-color: var(--light-blue);
+    padding: 1.5rem 0;
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    &-toggle {
+      cursor: pointer;
+    }
+  }
+
+  &__nav {
+
+    &-desktop {
+      display: none;
+    }
+
+    &-mobile {
+      display: none;
+      position: relative;
+
+      &.is_open {
+        background-color: var(--white);
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        margin: 2rem 0 1rem 0;
+        padding: 2rem 0;
+
+        > ul > li > a {
+          line-height: 2.5;
+          color: var(--dark-grayish-blue);
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: -20px;
+          right: 0;
+          background-color: var(--white);
+
+          border-top: 10px solid var(--light-blue);
+          border-right: 10px solid white;
+          border-left: 10px solid var(--light-blue);
+          border-bottom: 10px solid white;
+        }
+      }
+    }
+  }
+}
