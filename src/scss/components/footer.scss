@@ -1,0 +1,51 @@
+@use '../utilities/breakpoints.scss' as *;
+
+.footer {
+
+  &__wrapper {
+    padding: 3.5rem 0;
+    background-color: var(--light-green);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &-logo {
+      margin-bottom: 2.5rem;
+
+      > img {
+        width: 200px;
+      }
+    }
+
+    &-nav {
+      margin-bottom: 2rem;
+
+      &-menu {
+        width: 280px;
+
+        > ul {
+          display: flex;
+          justify-content: space-between;
+
+          > li > a {
+            color: var(--dark-moderate-cyan);
+          }
+        }
+      }
+    }
+
+    &-social {
+      margin: 3rem 0 2rem 0;
+      width: 150px;
+
+      > ul {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}

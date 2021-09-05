@@ -4,54 +4,125 @@
 
   &__wrapper {
     display: flex;
-    background-color: var(--light-blue);
     padding: 1.5rem 0;
+    background-color: var(--light-blue);
+    height: 70px;
+    width: 100%;
+
+    @include breakpoint(medium) {
+      height: 100%;
+    }
   }
 
-  &__menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  &__content {
+    display: initial;
     
+    @include breakpoint(medium) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-logo {
+
+      > img {
+        width: 100%;
+
+        @include breakpoint(medium) {
+          width: 200px;
+        }
+      }
+    }
+
+    &-items {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
     &-toggle {
       cursor: pointer;
-    }
-  }
 
-  &__nav {
-
-    &-desktop {
-      display: none;
+      @include breakpoint(medium) {
+        display: none;
+      }
     }
 
-    &-mobile {
-      display: none;
-      position: relative;
+    &-nav {
 
-      &.is_open {
+      &-menu {
         background-color: var(--white);
-        display: flex;
+        display: none;
+        position: relative;
         text-align: center;
         justify-content: center;
         margin: 2rem 0 1rem 0;
         padding: 2rem 0;
 
-        > ul > li > a {
-          line-height: 2.5;
-          color: var(--dark-grayish-blue);
+        @include breakpoint(medium) {
+          display: flex;
+          margin: 0;
+          padding: 0;
+          background-color: transparent;
         }
 
+        > ul {
+          display: block;
+          line-height: 3.5;
+
+          > li > a {
+            color: var(--dark-grayish-blue);
+
+            @include breakpoint(medium) {
+              color: var(--white);
+            }
+          }
+
+          > li:last-child {
+            font-family: var(--font-heading);
+            padding: 0 1.85rem;
+            background-color: var(--yellow);
+            margin-top: 1rem;
+            border-radius: 50px;
+            cursor: pointer;
+
+            @include breakpoint(medium) {
+              margin-top: 0;
+              background-color: var(--white);
+            }
+            
+            > a {
+              color: var(--dark-blue);
+            }
+          }
+          
+          @include breakpoint(medium) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 480px;
+          }
+        }
+
+        // tooltip tail
         &::before {
           content: "";
           position: absolute;
           top: -20px;
           right: 0;
           background-color: var(--white);
-
           border-top: 10px solid var(--light-blue);
-          border-right: 10px solid white;
+          border-right: 10px solid var(--white);
           border-left: 10px solid var(--light-blue);
-          border-bottom: 10px solid white;
+          border-bottom: 10px solid var(--white);
+
+          @include breakpoint(medium) {
+            border: none;
+          }
+        }
+
+        // mobile menu : active state
+        &.is_active {
+          display: flex;
         }
       }
     }
