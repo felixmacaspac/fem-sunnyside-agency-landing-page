@@ -1,21 +1,12 @@
 // Toggle navbar
-const showMenu = (toggleId, navId) => {
-  const toggle = document.getElementById("toggleBtn")
-  const nav = document.getElementById("navMenu");
 
-  console.log(toggle)
-  console.log(nav)
+const hamburger = document.querySelector("#toggleBtn");
+const navMenu = document.querySelector("#navMenu");
 
-  if (toggle && nav) {
-    toggle.addEventListener("click", () => {
-      nav.classList.toggle("is_active");
-
-      console.log("hello")
-    });
-  }
-};
-
-showMenu("nav-toggle", "nav-menu");
+hamburger.addEventListener("click", (mobileMenu) => {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("is_active");
+});
 
 // Remove menu for every click
 const navLink = document.querySelectorAll(".nav-link");
