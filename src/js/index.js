@@ -4,7 +4,7 @@ const hamburger = document.querySelector("#toggleBtn");
 const navMenu = document.querySelector("#navMenu");
 
 hamburger.addEventListener("click", (mobileMenu) => {
-  hamburger.classList.toggle("active");
+  hamburger.classList.toggle("-active");
   navMenu.classList.toggle("is_active");
 });
 

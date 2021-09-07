@@ -14,17 +14,23 @@
     }
   }
 
-  &__content {
+  &__container {
     display: initial;
     
     @include breakpoint(medium) {
       display: flex;
       justify-content: space-between;
     }
+  }
 
-    &-logo {
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-      > img {
+    &-image {
+
+      > a > img {
         width: 100%;
 
         @include breakpoint(medium) {
@@ -33,13 +39,7 @@
       }
     }
 
-    &-items {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    &-toggle {
+    &-button {
       cursor: pointer;
 
       @include breakpoint(medium) {
@@ -56,7 +56,7 @@
         background-color: var(--white);
       }
 
-      &.active {
+      &.-active {
 
         > .bar:nth-child(2) {
           opacity: 0;
@@ -71,109 +71,107 @@
         }
       }
     }
+  }
 
-    &-nav {
-
-
-      &-menu {
-        background-color: var(--white);
-        position: relative;
+  &__nav {
+    
+    &-menu {
+      background-color: var(--white);
+      position: relative;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      margin: 2rem 0 1rem 0;
+      padding: 2rem 0;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      position: relative;
+  
+      @include breakpoint(medium) {
         display: flex;
-        text-align: center;
-        justify-content: center;
-        margin: 2rem 0 1rem 0;
-        padding: 2rem 0;
-        opacity: 0;
-        transition: opacity 0.3s ease-in-out;
-        position: relative;
+        margin: 0;
+        padding: 0;
+        background-color: transparent;
+        opacity: 1;
+      }
 
+      &::before {
+        content: "";
+        position: absolute;
+        top: -20px;
+        right: 0;
+        background-color: var(--white);
+        border-top: 10px solid var(--light-blue);
+        border-right: 10px solid var(--white);
+        border-left: 10px solid var(--light-blue);
+        border-bottom: 10px solid var(--white);
+  
         @include breakpoint(medium) {
-          display: flex;
-          margin: 0;
-          padding: 0;
-          background-color: transparent;
-          opacity: 1;
+          border: none;
         }
+      }
+  
+      // mobile menu : active state
+      &.is_active {
+        opacity: 1;
+      }
+    }
 
-        > ul {
-          display: block;
-          line-height: 3.5;
+    &-unordered {
+      display: block;
+      line-height: 3.5;
 
-          > li > a {
-            color: var(--dark-grayish-blue);
+      @include breakpoint(medium) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 480px;
+      }
+    }
 
-            @include breakpoint(medium) {
-              color: var(--white);
-            }
-          }
+    &-list > &-anchor {
+      color: var(--dark-grayish-blue);
 
-          > li:last-child {
-            font-family: var(--font-heading);
-            padding: 0 1.85rem;
-            background-color: var(--yellow);
-            margin-top: 1rem;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: 0.3s ease-in-out;
+      @include breakpoint(medium) {
+        color: var(--white);
+      }
+    }
 
-            @include breakpoint(medium) {
-              margin-top: 0;
-              background-color: var(--white);
-            }
-            
-            > a {
-              transition: 0.3s ease-in-out;
-              color: var(--dark-blue);
-            }
-          }
+    &-list:last-child {
+      font-family: var(--font-heading);
+      padding: 0 1.85rem;
+      background-color: var(--yellow);
+      margin-top: 1rem;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+      
+      @include breakpoint(medium) {
+        margin-top: 0;
+        background-color: var(--white);
+      }
+    }
 
-          > li:last-child:hover {
-            transition: 0.3s ease-in-out;
-            background-color: var(--light-blue);
-            
-            @include breakpoint(medium) {
-              background-color: var(--yellow);
-            }
-            
-            > a {
-              transition: 0.3s ease-in-out;
-              color: var(--white);
+    &-list:last-child > &-anchor {
+      transition: 0.3s ease-in-out;
+      color: var(--dark-blue);
+    }
 
-              @include breakpoint(medium) {
-                color: var(--dark-blue);
-              }
-            }
-          }
-          
-          @include breakpoint(medium) {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 480px;
-          }
-        }
+    &-list:last-child:hover {
+      transition: 0.3s ease-in-out;
+      background-color: var(--light-blue);
+      
+      @include breakpoint(medium) {
+        background-color: var(--yellow);
+      }
+    }
 
-        // tooltip tail
-        &::before {
-          content: "";
-          position: absolute;
-          top: -20px;
-          right: 0;
-          background-color: var(--white);
-          border-top: 10px solid var(--light-blue);
-          border-right: 10px solid var(--white);
-          border-left: 10px solid var(--light-blue);
-          border-bottom: 10px solid var(--white);
-
-          @include breakpoint(medium) {
-            border: none;
-          }
-        }
-
-        // mobile menu : active state
-        &.is_active {
-          opacity: 1;
-        }
+    &-list:last-child > &-anchor:hover {
+      transition: 0.3s ease-in-out;
+      color: var(--white);
+        
+      @include breakpoint(medium) {
+        color: var(--dark-blue);
       }
     }
   }
