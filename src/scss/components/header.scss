@@ -114,6 +114,7 @@
       // mobile menu : active state
       &.is_active {
         opacity: 1;
+        z-index: 1;
       }
     }
 
@@ -156,9 +157,8 @@
       transition: 0.3s ease-in-out;
       color: var(--dark-blue);
     }
-
+    
     &-list:last-child:hover {
-      transition: 0.3s ease-in-out;
       background-color: var(--light-blue);
       
       @include breakpoint(medium) {
@@ -166,13 +166,9 @@
       }
     }
 
-    &-list:last-child > &-anchor:hover {
+    &-list:last-child:hover > &-anchor:last-child {
       transition: 0.3s ease-in-out;
       color: var(--white);
-        
-      @include breakpoint(medium) {
-        color: var(--dark-blue);
-      }
     }
   }
 }
