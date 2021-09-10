@@ -33,6 +33,11 @@
 
           > li > a {
             color: var(--dark-moderate-cyan);
+
+            &:hover {
+              color: var(--white);
+              transition: all 0.3s ease-in-out;
+            }
           }
         }
       }
@@ -46,6 +51,16 @@
         display: flex;
         justify-content: space-between;
       }
+    }
+
+    &-attribution {
+      font-size: 14px;
+      color: var(--dark-moderate-cyan);
+      text-align: center;
+    }
+
+    &-attribution > p > a {
+      color: var(--dark-blue);
     }
   }
 }

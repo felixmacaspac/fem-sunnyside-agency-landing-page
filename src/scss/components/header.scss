@@ -162,7 +162,7 @@
       background-color: var(--light-blue);
       
       @include breakpoint(medium) {
-        background-color: var(--yellow);
+        background-color: var(--light-blue-hover);
       }
     }
 

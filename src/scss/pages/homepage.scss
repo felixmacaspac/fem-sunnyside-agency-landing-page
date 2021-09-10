@@ -22,17 +22,17 @@
   }
 
   &-image {
+    display: inline-block;
     width: 100%;
     height: 100%;
     position: relative;
     
-    picture > img {
+    > picture > img {
       width: 100%;
       max-height: 270px;
       object-fit: cover;
       object-position: 100% 100%;
-      position: relative;
-      top: 4px;
+      vertical-align: bottom;
 
       @include breakpoint(small) {
         max-height: 400;
@@ -73,3 +73,248 @@
   }
 }
 
+.home__about {
+
+  &-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+
+    .learn-btn::after {
+      background-color: var(--yellow);
+    }
+  }
+
+  &-content:nth-child(2n) {
+    flex-direction: row;
+
+    .learn-btn::after {
+      background-color: var(--soft-red);
+    }
+  }
+
+  &-image {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+
+    @include breakpoint(medium) {
+      width: 50%;
+    }
+  }
+
+  &-image > picture > img {
+    vertical-align: bottom;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+
+    @include breakpoint(medium) {
+      height: 500px;
+    }
+
+    @include breakpoint(large) {
+      height: 600px;
+    }
+  }
+  
+  &-title {
+    padding: 0 2rem;
+    text-align: center;
+    margin: 3.5rem 0;
+
+    @include breakpoint(medium) {
+      width: 50%;
+      padding: 0 2.5rem;
+      text-align: left;
+    }
+
+    @include breakpoint(large) {
+      padding: 0 6rem;
+    }
+  }
+
+  &-title > p {
+    color: var(--dark-grayish-blue);
+    line-height: 1.75;
+    margin-bottom: 2rem;
+    
+    @include breakpoint(medium) {
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+.home__services {
+
+  &-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &-content {
+    width: 100%;
+    position: relative;
+
+    @include breakpoint(medium) {
+      width: 50%;
+    }
+  }
+
+  &-text {
+    display: flex;
+    height: 35%;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    text-align: center;
+
+    @include breakpoint(medium) {
+      height: 45%;
+    }
+
+    @include breakpoint(large) {
+      height: 35%;
+    }
+  }
+
+  &-text-wrapper {
+    width: 100%;
+    padding: 0 1.5rem;
+
+    @include breakpoint(large) {
+      width: 70%;
+    }
+  }
+
+  &-text-wrapper > p {
+    line-height: 1.5;
+    color: var(--dark-blue);
+    font-size: clamp(18px, 3vw, 18px);
+
+    @include breakpoint(medium) {
+      line-height: 1.2;
+    }
+
+    @include breakpoint(large) {
+      line-height: 1.5;
+    }
+  }
+
+
+  &-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &-image > picture > img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.home__testimonial {
+
+  &-wrapper {
+    margin: 3.5rem 0;
+
+    @include breakpoint(medium) {
+      margin: 10rem 0;
+    }
+  }
+
+  .container {
+    max-width: 1200px;
+  }
+
+  &-content {
+    width: 100%;
+    text-align: center;
+
+    @include breakpoint(medium) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &-title > h4 {
+    text-align: center;
+    letter-spacing: 5px;
+    color: var(--grayish-blue);
+    margin-bottom: 3.5rem;
+  }
+  
+  &-item {
+    width: 100%;
+    line-height: 1.5;
+    margin-bottom: 5rem;
+
+    @include breakpoint(medium) {
+      width: 300px;
+      margin-bottom: 3rem;
+      margin-top: 3rem;
+    }
+  }
+
+  &-item > img {
+    width: 80px;
+    border-radius: 50%;
+  }
+
+  &-item > p {
+    color: var(--dark-grayish-blue);
+    margin-top: 2rem;
+  }
+
+  &-item > span {
+    font-size: clamp(14px, 1vw, 16px);
+    color: var(--grayish-blue);
+  }
+
+  &-person {
+    line-height: .5;
+    margin-top: 3rem;
+
+    @include breakpoint(medium) {
+      margin-top: 5rem;
+    }
+  }
+
+  &-person > p {
+    font-family: var(--font-heading);
+    font-size: clamp(18px, 2vw, 22px);
+  }
+
+  &-person > span {
+    color: var(--grayish-blue);
+  }
+}
+
+.home__projects {
+
+  &-content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &-item {
+    width: 50%;
+
+    @include breakpoint(medium) {
+      width: 25%;
+    }
+  }
+
+  &-item > picture > img {
+    width: 100%;
+    height: 100%;
+  }
+}
