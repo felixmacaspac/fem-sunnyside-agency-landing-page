@@ -136,6 +136,11 @@
       @include breakpoint(medium) {
         color: var(--white);
       }
+
+      &:hover {
+        color: var(--yellow);
+        transition: all 0.3s ease-in-out;
+      }
     }
 
     &-list:last-child {
