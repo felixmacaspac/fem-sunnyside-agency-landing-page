@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution)
-- Live Site URL: [Add live site URL here](https://sunnyside-lp-felix.netlify.app/)
+- Solution URL: [solution site](https://www.frontendmentor.io/solutions/landing-page-made-using-gulpjs-and-sass-IovLIOtqz)
+- Live Site URL: [live site](https://sunnyside-lp-felix.netlify.app/)
 
 ## My process
 - Tried to experience some stuff while watching [coder coder's](https://www.youtube.com/c/TheCoderCoder) tutorial on how she usually approach projects. I started by taking notes, like what she did in her video and tried to research some useful stuff that could help me with the project. I've also tried the mobile-first workflow. 
