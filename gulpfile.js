@@ -59,7 +59,9 @@ function watchTask() {
 // Build task
 exports.build = series(
   series(scssTask, jsTask, function copyAssets() {
-    return src(["*.html", "src/scss/style.scss", "src/js/index.js"], { base: "/" }).pipe(dest("dist/"));
+    return src(["src/scss/style.scss", "src/js/index.js"], { base: "/" }).pipe(
+      dest("dist/")
+    );
   })
 );
 
