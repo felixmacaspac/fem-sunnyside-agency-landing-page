@@ -7,10 +7,6 @@ const cssnano = require("cssnano");
 const babel = require("gulp-babel");
 const terser = require("gulp-terser");
 const browsersync = require("browser-sync").create();
-const copyAssets = require("gulp-css-copy-assets");
-
-// Use dart-sass for @use
-// sass.compiler = require('dart-sass');
 
 // Sass Task
 function scssTask() {
