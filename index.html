@@ -7,13 +7,13 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <link rel="stylesheet" href="/dist/style.css">
-  <script defer src="/dist/index.js"></script>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap" rel="stylesheet"> 
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <title>Frontend Mentor | Sunnyside Agency</title>
 </head>
 <body>
@@ -25,7 +25,7 @@
         <div class="header__item">
           <div class="header__item-image">
             <a href="/">
-              <img src="/images/logo-light.svg" alt="">
+              <img src="/images/logo-light.svg" alt="sunnyside logo">
             </a>
           </div>
           <button class="header__item-button" id="toggleBtn">
@@ -60,9 +60,9 @@
         </div>
         <div class="home__banner-image">
           <picture>
-            <source media="(max-width: 767px)" srcset="/images/mobile/image-header.jpg" sizes="480w">
-            <source media="(min-width: 768px)" srcset="/images/desktop/image-header.jpg" sizes="1280w">
-            <img src="/images/desktop/image-header.jpg" alt="">
+            <source media="(max-width: 767px)" srcset="/images/mobile/image-header.jpg" sizes="480px">
+            <source media="(min-width: 768px)" srcset="/images/desktop/image-header.jpg" sizes="1280px">
+            <img src="/images/desktop/image-header.jpg" alt="hero image">
           </picture>
 
           <div class="home__banner-image --indicator">
@@ -84,12 +84,12 @@
         <div class="home__about-content">
           <div class="home__about-image">
             <picture>
-              <source media="(max-width: 767px)" srcset="/images/mobile/image-transform.jpg" sizes="480w">
-              <source media="(min-width: 768px)" srcset="/images/desktop/image-transform.jpg" sizes="1280w">
-              <img src="/images/desktop/image-transform.jpg" alt="">
+              <source media="(max-width: 767px)" srcset="/images/mobile/image-transform.jpg" sizes="480px">
+              <source media="(min-width: 768px)" srcset="/images/desktop/image-transform.jpg" sizes="1280px">
+              <img src="/images/desktop/image-transform.jpg" alt="about image">
             </picture>
           </div>
-          <div class="home__about-title">
+          <div class="home__about-title" data-aos="fade-up" >
             <h2>Transform your brand</h2>
             <p>We are a full-service creative agency specializing in helping brands grow fast. 
               Engage your clients through compelling visuals that do most of the marketing for you.</p>
@@ -99,12 +99,12 @@
         <div class="home__about-content">
           <div class="home__about-image">
             <picture>
-              <source media="(max-width: 767px)" srcset="/images/mobile/image-stand-out.jpg" sizes="480w">
-              <source media="(min-width: 768px)" srcset="/images/desktop/image-stand-out.jpg" sizes="1280w">
-              <img src="/images/desktop/image-stand-out.jpg" alt="">
+              <source media="(max-width: 767px)" srcset="/images/mobile/image-stand-out.jpg" sizes="480px">
+              <source media="(min-width: 768px)" srcset="/images/desktop/image-stand-out.jpg" sizes="1280px">
+              <img src="/images/desktop/image-stand-out.jpg" alt="about image">
             </picture>
           </div>
-          <div class="home__about-title">
+          <div class="home__about-title" data-aos="fade-up">
             <h2>Stand out to the right audience</h2>
             <p>Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places. </p>
             <a href="#" class="learn-btn">LEARN MORE</a>
@@ -119,31 +119,32 @@
       <div class="home__services-container">
         <div class="home__services-content">
           <div class="home__services-text">
-            <div class="home__services-text-wrapper">
+            <div class="home__services-text-wrapper" data-aos="fade-up">
               <h3>Graphic Design</h3>
               <p>Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
             </div>
           </div>
           <div class="home__services-image">
             <picture>
-              <source media="(max-width: 767px)" srcset="/images/mobile/image-graphic-design.jpg" sizes="480w">
-              <source media="(min-width: 768px)" srcset="/images/desktop/image-graphic-design.jpg" sizes="1280w">
-              <img src="/images/desktop/image-graphic-design.jpg" alt="">
+              <source media="(max-width: 767px)" srcset="/images/mobile/image-graphic-design.jpg" sizes="480px">
+              <source media="(min-width: 768px)" srcset="/images/desktop/image-graphic-design.jpg" sizes="1280px">
+              <img src="/images/desktop/image-graphic-design.jpg" alt="services image">
             </picture>
           </div>
         </div>
         <div class="home__services-content">
           <div class="home__services-text">
-            <div class="home__services-text-wrapper">
+            <div class="home__services-text-wrapper" data-aos="fade-up">
               <h3>Photography</h3>
               <p>Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
             </div>
           </div>
           <div class="home__services-image">
             <picture>
-              <source media="(max-width: 767px)" srcset="/images/mobile/image-photography.jpg" sizes="480w">
-              <source media="(min-width: 768px)" srcset="/images/desktop/image-photography.jpg" sizes="1280w">
-              <img src="/images/desktop/image-photography.jpg" alt="">
+              <source media="(max-width: 767px)" srcset="/images/mobile/image-photography.jpg" sizes="480px">
+              <source media="(min-width: 768px)" srcset="/images/desktop/image-photography.jpg" sizes="1280px">
+              <img src="/images/desktop/image-photography.jpg" alt="services image
+              ">
             </picture>
           </div>
         </div>
@@ -151,7 +152,7 @@
     </div>
   </section>
 
-  <section class="home__testimonial">
+  <section class="home__testimonial"  data-aos="fade-up">
     <div class="home__testimonial-wrapper">
       <div class="container">
         <div class="home__testimonial-title">
@@ -159,7 +160,7 @@
         </div>
         <div class="home__testimonial-content">
           <div class="home__testimonial-item">
-            <img src="/images/image-emily.jpg" alt="">
+            <img src="/images/image-emily.jpg" alt="client's testimonial image">
             <p>We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
             <div class="home__testimonial-person">
               <p>Emily R.</p>
@@ -168,7 +169,7 @@
           </div>
 
           <div class="home__testimonial-item">
-            <img src="/images/image-thomas.jpg" alt="">
+            <img src="/images/image-thomas.jpg" alt="client's testimonial image">
             <p>Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.</p>
             <div class="home__testimonial-person">
               <p>Thomas S.</p>
@@ -177,7 +178,7 @@
           </div>
 
           <div class="home__testimonial-item">
-            <img src="/images/image-jennie.jpg" alt="">
+            <img src="/images/image-jennie.jpg" alt="client's testimonial image">
             <p>Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
             <div class="home__testimonial-person">
               <p>Jennie F.</p>
@@ -193,32 +194,32 @@
     <div class="home__projects-wrapper">
       <div class="home__projects-container">
         <div class="home__projects-content">
-          <div class="home__projects-item">
+          <div class="home__projects-item" data-aos="fade">
             <picture>
-              <source media="(max-width: 767px)" srcset="/images/mobile/image-gallery-milkbottles.jpg" sizes="480w">
-              <source media="(min-width: 768px)" srcset="/images/desktop/image-gallery-milkbottles.jpg" sizes="1280w">
-              <img src="/images/desktop/image-gallery-milkbottles.jpg" alt="">
+              <source media="(max-width: 767px)" srcset="/images/mobile/image-gallery-milkbottles.jpg" sizes="480px">
+              <source media="(min-width: 768px)" srcset="/images/desktop/image-gallery-milkbottles.jpg" sizes="1280px">
+              <img src="/images/desktop/image-gallery-milkbottles.jpg" alt="projects image">
             </picture>
           </div>
-          <div class="home__projects-item">
+          <div class="home__projects-item" data-aos="fade">
             <picture>
-              <source media="(max-width: 767px)" srcset="/images/mobile/image-gallery-orange.jpg" sizes="480w">
-              <source media="(min-width: 768px)" srcset="/images/desktop/image-gallery-orange.jpg" sizes="1280w">
-              <img src="/images/desktop/image-gallery-orange.jpg" alt="">
+              <source media="(max-width: 767px)" srcset="/images/mobile/image-gallery-orange.jpg" sizes="480px">
+              <source media="(min-width: 768px)" srcset="/images/desktop/image-gallery-orange.jpg" sizes="1280px">
+              <img src="/images/desktop/image-gallery-orange.jpg" alt="projects image">
             </picture>
           </div>
-          <div class="home__projects-item">
+          <div class="home__projects-item" data-aos="fade">
             <picture>
-              <source media="(max-width: 767px)" srcset="/images/mobile/image-gallery-cone.jpg" sizes="480w">
-              <source media="(min-width: 768px)" srcset="/images/desktop/image-gallery-cone.jpg" sizes="1280w">
-              <img src="/images/desktop/image-gallery-cone.jpg" alt="">
+              <source media="(max-width: 767px)" srcset="/images/mobile/image-gallery-cone.jpg" sizes="480px">
+              <source media="(min-width: 768px)" srcset="/images/desktop/image-gallery-cone.jpg" sizes="1280px">
+              <img src="/images/desktop/image-gallery-cone.jpg" alt="projects image">
             </picture>
           </div>
-          <div class="home__projects-item">
+          <div class="home__projects-item" data-aos="fade">
             <picture>
-              <source media="(max-width: 767px)" srcset="/images/mobile/image-gallery-sugarcubes.jpg" sizes="480w">
-              <source media="(min-width: 768px)" srcset="/images/desktop/image-gallery-sugarcubes.jpg" sizes="1280w">
-              <img src="/images/desktop/image-gallery-sugarcubes.jpg" alt="">
+              <source media="(max-width: 767px)" srcset="/images/mobile/image-gallery-sugarcubes.jpg" sizes="480px">
+              <source media="(min-width: 768px)" srcset="/images/desktop/image-gallery-sugarcubes.jpg" sizes="1280px">
+              <img src="/images/desktop/image-gallery-sugarcubes.jpg" alt="projects image">
             </picture>
           </div>
         </div>
@@ -237,32 +238,32 @@
         <div class="footer__content-nav">
           <nav class="footer__content-nav-menu">
             <ul>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Projects</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#projects">Projects</a></li>
             </ul>
           </nav>
         </div>
         <div class="footer__content-social">
           <ul>
             <li>
-              <a href="#">
-                <img src="/images/icon-facebook.svg" alt="">
+              <a href="">
+                <img src="/images/icon-facebook.svg" alt="facebook icon">
               </a>
             </li>
             <li>
-              <a href="#">
-                <img src="/images/icon-instagram.svg" alt="">
+              <a href="">
+                <img src="/images/icon-instagram.svg" alt="instagram icon">
               </a>
             </li>
             <li>
-              <a href="#">
-                <img src="/images/icon-twitter.svg" alt="">
+              <a href="">
+                <img src="/images/icon-twitter.svg" alt="twitter icon">
               </a>
             </li>
             <li>
-              <a href="#">
-                <img src="/images/icon-pinterest.svg" alt="">
+              <a href="">
+                <img src="/images/icon-pinterest.svg" alt="pinterest icon">
               </a>
             </li>
           </ul>
@@ -279,8 +280,9 @@
     </div>
   </div>
 </footer>
-
 </body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="/dist/index.js"></script>
 </html>
 
   
